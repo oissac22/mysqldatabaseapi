@@ -1,0 +1,36 @@
+GET /test
+    api url test
+
+
+GET /
+    return database list
+
+
+POST /newdatabase
+    create new database
+    send body params:
+        {
+            database:string
+        }
+
+GET /backup
+    download backup all databases
+
+GET /backup/:database
+    download specific database backup
+
+GET /backup/:database/:table
+    download specific table backup in specific database
+
+
+DELETE /:database
+    delete database
+
+
+GET POST /:database
+    show query database
+    send body or query params:
+        {
+            sql:string with sql query,
+            ...
+        }
