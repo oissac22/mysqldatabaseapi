@@ -16,7 +16,7 @@ export const newConnection = ({
     database,
     host=process.env.MYSQL_ROOT_HOST || 'localhost',
     user=process.env.MYSQL_USER || 'root',
-    password=process.env.MYSQL_ROOT_PASSWORD || 'yahewaai',
+    password=process.env.MYSQL_ROOT_PASSWORD || '18791120529',
     charset=process.env.MYSQL_CHARSET || 'utf8',
     port=(process.env.MYSQL_PORT || 10073) as number,
     timezone=process.env.MYSQL_TIMEZONE || 'local'
