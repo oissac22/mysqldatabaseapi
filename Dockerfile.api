@@ -8,6 +8,8 @@ ENV MYSQL_CHARSET=utf8
 ENV MYSQL_TIMEZONE=local
 ENV MYSQL_PORT=10073
 
+ENV API_KEY=48y1rj89787kr2318dfwpo8h4t9y45
+
 RUN apk update
 RUN apk add zip
 RUN apk add unzip

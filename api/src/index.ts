@@ -20,6 +20,18 @@ function randomName(){
 
 
 
+api.all('/*', (req,res,next) => {
+    const key = req.headers.accesskey
+    console.log('req.headers :>> ', req.headers);
+    console.log('key :>> ', key);
+    console.log('atual :>> ', ( process.env.API_KEY || '48y1rj89787kr2318dfwpo8h4t9y45' ));
+    if(key !== ( process.env.API_KEY || '48y1rj89787kr2318dfwpo8h4t9y45' ))
+        return res.status(404).send('Página não encontrada')
+    next()
+})
+
+
+
 api.get('/test', async (req,res) => {
     try{
         const result = await query('mysql','select now()')
