@@ -1,6 +1,4 @@
-@echo off
-
-cls
+clear
 echo instalando...
 
 docker rm -f ativa-mais-db

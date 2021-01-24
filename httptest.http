@@ -1,9 +1,0 @@
-GET http://localhost/backup/mysql
-###
-
-POST http://localhost/mysql
-Content-Type: application/json
-
-{
-    "sql":"show tables"
-}
