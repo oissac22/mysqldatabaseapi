@@ -1,8 +1,14 @@
 FROM mariadb
 
 ENV MYSQL_ROOT_PASSWORD=18791120529
+ENV DATABASE=
 
 EXPOSE 3306
+
+WORKDIR /sql
+
+COPY sql /sql
+CMD mysql<main.sql
 
 # CMD ["mysql","-u","root","-p$MYSQL_ROOT_PASSWORD", "-e", "create user 'api'@'%.%.%.%' identified by '$MYSQL_ROOT_PASSWORD'"]
 # CMD ["mysql","-u","root","-p$MYSQL_ROOT_PASSWORD", "-e", "grant all privileges on *.* to 'api'@'%.%.%.%'"]
