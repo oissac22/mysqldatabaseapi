@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import express from 'express'
 import query from './mysql'
 import { exec } from 'child_process'

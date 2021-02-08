@@ -1,2 +1,35 @@
-GET http://localhost:10073/test
-ACCESSKEY: 48y1rj89787kr2318dfwpo8h4t9y45
+GET http://localhost/test
+ACCESSKEY: 112233
+###
+
+GET http://localhost/
+ACCESSKEY: 112233
+###
+
+POST http://localhost/ntdsoftg_ntdsoft
+Content-Type: application/json
+ACCESSKEY: 112233
+
+{
+    "sql":"select Codigo, Nome, Responsavel, DataNasc from TblAluno"
+}
+
+
+### docker tests
+
+
+GET http://localhost:10074/test
+ACCESSKEY: 999888
+###
+
+GET http://localhost:10074/
+ACCESSKEY: 999888
+###
+
+POST http://localhost:10074/ntdsoftg_ntdsoft
+Content-Type: application/json
+ACCESSKEY: 999888
+
+{
+    "sql":"select Codigo, Nome, Responsavel, DataNasc from TblAluno"
+}
